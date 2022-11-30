@@ -1,6 +1,6 @@
 package br.com.alura.chapter2.model;
 
-class Usuario {
+public class Usuario {
     private String nome;
     private int pontos;
     private boolean moderador;
