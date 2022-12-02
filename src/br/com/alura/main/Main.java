@@ -1,6 +1,9 @@
-package br.com.alura.chapter2.model;
+package br.com.alura.main;
+
+import br.com.alura.chapter2.model.Usuario;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.function.Consumer;
 
@@ -41,6 +44,11 @@ public class Main {
 
 
         //Por fim temos a forma mais en
-        usuarios.forEach(u -> System.out.print(" -> " + u.getNome()));
+//        usuarios.forEach(u -> System.out.print(" -> " + u.getNome()));
+
+
+        //Ordenando pela pontuação
+        Collections.sort(usuarios);
+        usuarios.forEach(System.out::println);
     }
 }
