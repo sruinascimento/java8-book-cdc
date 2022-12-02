@@ -1,6 +1,6 @@
 package br.com.alura.chapter2.model;
 
-public class Usuario {
+public class Usuario implements Comparable<Usuario> {
     private String nome;
     private int pontos;
     private boolean moderador;
@@ -24,5 +24,19 @@ public class Usuario {
 
     public boolean isModerador() {
         return moderador;
+    }
+
+    @Override
+    public int compareTo(Usuario usuario) {
+        return this.pontos - usuario.getPontos();
+    }
+
+    @Override
+    public String toString() {
+        return "Usuario{" +
+                "nome='" + nome + '\'' +
+                ", pontos=" + pontos +
+                ", moderador=" + moderador +
+                '}';
     }
 }
