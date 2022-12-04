@@ -4,6 +4,7 @@ import br.com.alura.chapter2.model.Usuario;
 
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.function.Consumer;
 
@@ -49,6 +50,20 @@ public class Main {
 
         //Ordenando pela pontuação
         Collections.sort(usuarios);
+        usuarios.forEach(System.out::println);
+
+        //Ordenando pelo Nome em ordem lexicográfica
+//        Comparator<Usuario> comparacaoNome = new Comparator<Usuario>() {
+//            @Override
+//            public int compare(Usuario o1, Usuario o2) {
+//                return o1.getNome().compareTo(o2.getNome());
+//            }
+//        };
+//        Collections.sort(usuarios, comparacao);
+        //usando Lambda
+//        Comparator<Usuario> comparacaoNome = (u1, u2) -> u1.getNome().compareTo(u2.getNome());
+//        usuarios.sort((u1, u2) -> u1.getNome().compareTo(u2.getNome()));
+        usuarios.sort((u1, u2) -> u1.getNome().compareTo(u2.getNome()));
         usuarios.forEach(System.out::println);
     }
 }
